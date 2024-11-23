@@ -1,0 +1,2 @@
+this is where you should place your images
+the converter will ignore this .txt file!

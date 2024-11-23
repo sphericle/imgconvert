@@ -14,9 +14,10 @@ for filename in os.listdir(base_path):
         
         print('Converted ' + no_ext)
         
-        try:
-            i += 1
-            im = Image.open(file_path).convert('RGB')
-            im.save(f'output/converted {no_ext} {i}.png', "png")
-        except:
-            print('File not found')
+        if filename != 'info.txt':
+            try:
+                i += 1
+                im = Image.open(file_path).convert('RGB')
+                im.save(f'output/converted {no_ext} {i}.png', "png")
+            except:
+                print('File not found')
